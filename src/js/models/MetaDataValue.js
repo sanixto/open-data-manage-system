@@ -13,32 +13,16 @@ const MetaDataValue = sequelize.define('metaDataValue', {
     },
     metaDataKey: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'metaDataKey',
-        key: 'id'
-      }
+      allowNull: false
     },
     dataSet: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'dataSet',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER
     },
     dataFile: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'dataFile',
-        key: 'id'
-      }
+      type: Sequelize.INTEGER
     },
     category: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'category',
-          key: 'id'
-        }
+        type: Sequelize.INTEGER
       }
   });
 

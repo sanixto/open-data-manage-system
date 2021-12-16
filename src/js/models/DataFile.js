@@ -16,11 +16,7 @@ const DataFile = sequelize.define('dataFile', {
     },
     dataSet: {
       type: Sequelize.INTEGER,
-      allowNull:false,
-      references: {
-        model: 'dataSet',
-        key: 'id'
-      }
+      allowNull:false
     }
   });
 

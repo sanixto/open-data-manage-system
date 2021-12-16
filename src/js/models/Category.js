@@ -9,11 +9,7 @@ const Category = sequelize.define('category', {
       primaryKey: true
     },
     category: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id'
-      }
+      type: Sequelize.INTEGER
     }
   });
 

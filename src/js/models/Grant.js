@@ -10,33 +10,17 @@ const Grant = sequelize.define('grant', {
     },
     user: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'user',
-        key: 'id'
-      }
+      allowNull: false
     },
     role: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'role',
-        key: 'id'
-      }
+      type: Sequelize.INTEGER
     },
     actionType: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'actionType',
-        key: 'id'
-      }
+      type: Sequelize.INTEGER
     },
     dataSet: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'dataSet',
-        key: 'id'
-      }
+      allowNull: false
     }
   });
 

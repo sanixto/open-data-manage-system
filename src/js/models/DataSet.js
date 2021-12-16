@@ -15,11 +15,7 @@ const DataSet = sequelize.define('dataSet', {
       type: Sequelize.DATE,
     },
     category: {
-      type: Sequelize.INTEGER,
-      references: {
-        model: 'category',
-        key: 'id'
-      }
+      type: Sequelize.INTEGER
     }
   });
 

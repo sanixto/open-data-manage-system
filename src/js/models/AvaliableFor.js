@@ -10,19 +10,11 @@ const AvailableFor = sequelize.define('availableFor', {
     },
     type: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'type',
-        key: 'id'
-      }
+      allowNull: false
     },
     metaDataKey: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'metaDataKey',
-        key: 'id'
-      }
+      allowNull: false
     }
   });
 

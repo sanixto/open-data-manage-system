@@ -12,7 +12,7 @@ const { Action,
   Role,
   State,
   Type,
-  User, } = require('./models/User');
+  User } = require('./models/models');
  
 sequelize
   .authenticate()
@@ -24,9 +24,34 @@ sequelize
   });
 
   // Tests
-
   (async () => {
-    // Отримати всіх користувачів
-    const users = await User.findAll();
-    console.log("All:", JSON.stringify(users, null, 4));
-  })()
+    let users;
+    // УВАГА: `force: true` спочатку дропне таблицю, а потім створить її знову.
+    try {
+      await User.sync({ force: true });
+      // Тепер таблиця `users` у бд відповідає моделі User
+     
+      await User.create({
+          id: 1,
+          password: '12412',
+          name: 'oleg'
+        });
+
+        users = await User.findAll();
+    } catch {
+      console.log(ERROR, err);
+    }
+    console.log(users);
+  })();
+
+// (async() => {
+//     // Отримати всіх користувачів
+//     let user;
+//     try {
+//       user = await User.findAll();
+//     } catch(err) {
+//       console.log("ERROR 2", err); 
+//       return;
+//     }
+//     console.log("All:", JSON.stringify(users, null, 4));
+// })();

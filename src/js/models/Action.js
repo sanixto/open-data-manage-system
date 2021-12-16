@@ -13,27 +13,15 @@ const Action = sequelize.define('action', {
     },
     state: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'state',
-        key: 'id'
-      }
+      allowNull: false
     },
     actionType: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'actionType',
-        key: 'id'
-      }
+      allowNull: false
     },
     grant: {
       type: Sequelize.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'grant',
-        key: 'id'
-      }
+      allowNull: false
     }
   });
 
