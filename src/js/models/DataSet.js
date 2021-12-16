@@ -6,7 +6,7 @@ const DataSet = sequelize.define('dataSet', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     updatedAt: {
       type: Sequelize.DATE,

@@ -6,7 +6,7 @@ const MetaDataKey = sequelize.define('metaDataKey', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     key: {
       type: Sequelize.STRING(255),

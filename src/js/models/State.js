@@ -6,7 +6,7 @@ const State = sequelize.define('state', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     name: {
       type: Sequelize.STRING(255)

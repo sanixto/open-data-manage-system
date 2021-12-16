@@ -6,7 +6,7 @@ const Action = sequelize.define('action', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     at: {
       type: Sequelize.DATE 

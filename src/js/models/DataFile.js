@@ -6,7 +6,7 @@ const DataFile = sequelize.define('dataFile', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     updatedAt: {
       type: Sequelize.DATE,

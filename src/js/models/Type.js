@@ -6,7 +6,7 @@ const Type = sequelize.define('type', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     text: {
       type: Sequelize.STRING(45) 

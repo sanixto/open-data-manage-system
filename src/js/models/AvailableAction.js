@@ -6,7 +6,7 @@ const AvailableAction = sequelize.define('availableAction', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     role: {
       type: Sequelize.INTEGER,

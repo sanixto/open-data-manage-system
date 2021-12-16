@@ -6,7 +6,7 @@ const Category = sequelize.define('category', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     category: {
       type: Sequelize.INTEGER,

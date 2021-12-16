@@ -6,7 +6,7 @@ const Grant = sequelize.define('grant', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     user: {
       type: Sequelize.INTEGER,

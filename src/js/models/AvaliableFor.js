@@ -6,7 +6,7 @@ const AvailableFor = sequelize.define('availableFor', {
       type: Sequelize.INTEGER,
       autoIncrement: true,
       allowNull: false,
-      primeryKey: true
+      primaryKey: true
     },
     type: {
       type: Sequelize.INTEGER,
