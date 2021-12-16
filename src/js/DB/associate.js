@@ -12,7 +12,7 @@ const { Action,
   Role,
   State,
   Type,
-  User } = require('./models/models');
+  User } = require('../models/models');
 
 function associate() {
   Type.hasMany(AvailableFor, {
@@ -119,7 +119,7 @@ function associate() {
     sourceKey: 'id'
   });
 
-  DataSet.belongsTo(DataSeCategoryt, {
+  DataSet.belongsTo(Category, {
     foreignKey: 'category',
     as: 'Category',
     targetKey: 'id'
@@ -202,14 +202,14 @@ function associate() {
     targetKey: 'id'
   });
 
-  Action.hasMany(ActionType, {
-    foreignKey: 'action',
+  ActionType.hasMany(Action, {
+    foreignKey: 'actionType',
     sourceKey: 'id'
   });
 
-  ActionType.belongsTo(Action, {
-    foreignKey: 'action',
-    as: 'Action',
+  Action.belongsTo(ActionType, {
+    foreignKey: 'actionType',
+    as: 'ActionType',
     targetKey: 'id'
   });
   
