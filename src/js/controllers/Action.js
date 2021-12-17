@@ -16,7 +16,7 @@ class ActionsController {
       try {
         const action = await Action.create(req.body);
         if (!action) throw new Error('You have entered incorect data \n')
-        res.end('Will add the action ' + req.body.name + ' with id: ' + req.body.id);
+        res.end('Will add the action with id: ' + req.body.id);
       } catch(err){
         res.statusCode = 404;
         res.end('Will not add the action \n ERROR: \n' + err.message); 
@@ -74,7 +74,7 @@ class ActionsController {
         const action = await Action.findByPk(req.params.id);
         if (!action) throw new Error('The action with id: ' + req.params.id + ' doesn\'t exist');
         action.destroy();
-        res.end('Deleting the action:' + req.params.id);
+        res.end('Deleting the action with id: ' + req.params.id);
       } catch(err) {
         res.statusCode = 404;
         res.end('ERROR:  \n ' + err.message);  
