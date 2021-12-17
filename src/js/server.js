@@ -5,6 +5,7 @@ const associate = require('./DB/associate');
 const morgan = require('morgan');
 
 const stateRouter = require('./routers/stateRouter');
+const actionRouter = require('./routers/actionRouter');
 
 const app = express();
 const hostname = 'localhost';
@@ -14,6 +15,7 @@ app.use( morgan('dev') );
 app.use( express.json() );
 
 app.use('/states', stateRouter);
+app.use('/actions', actionRouter);
 
 const server = http.createServer(app);
 
