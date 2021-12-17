@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const DataFile = sequelize.define('dataFile', {
+const DataFile = sequelize.define('DataFile', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -18,6 +18,10 @@ const DataFile = sequelize.define('dataFile', {
       type: Sequelize.INTEGER,
       allowNull:false
     }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = DataFile;

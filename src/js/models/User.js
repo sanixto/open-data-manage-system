@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const User = sequelize.define('user', {
+const User = sequelize.define('User', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -16,6 +16,10 @@ const User = sequelize.define('user', {
       type: Sequelize.STRING(100),
       allowNull: false,
     }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   

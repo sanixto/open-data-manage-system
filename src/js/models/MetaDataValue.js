@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const MetaDataValue = sequelize.define('metaDataValue', {
+const MetaDataValue = sequelize.define('MetaDataValue', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -24,6 +24,10 @@ const MetaDataValue = sequelize.define('metaDataValue', {
     category: {
         type: Sequelize.INTEGER
       }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = MetaDataValue;

@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const AvailableAction = sequelize.define('availableAction', {
+const AvailableAction = sequelize.define('AvailableAction', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -16,6 +16,10 @@ const AvailableAction = sequelize.define('availableAction', {
       type: Sequelize.INTEGER,
       allowNull: false
     }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = AvailableAction;

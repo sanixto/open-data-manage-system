@@ -213,12 +213,12 @@ function associate() {
     targetKey: 'id'
   });
   
-  State.hasMany(ActionType, {
+  State.hasMany(Action, {
     foreignKey: 'state',
     sourceKey: 'id'
   });
 
-  ActionType.belongsTo(State, {
+  Action.belongsTo(State, {
     foreignKey: 'state',
     as: 'State',
     targetKey: 'id'

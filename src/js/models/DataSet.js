@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const DataSet = sequelize.define('dataSet', {
+const DataSet = sequelize.define('DataSet', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -17,6 +17,10 @@ const DataSet = sequelize.define('dataSet', {
     category: {
       type: Sequelize.INTEGER
     }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = DataSet;

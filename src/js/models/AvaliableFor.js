@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const AvailableFor = sequelize.define('availableFor', {
+const AvailableFor = sequelize.define('AvailableFor', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -16,6 +16,10 @@ const AvailableFor = sequelize.define('availableFor', {
       type: Sequelize.INTEGER,
       allowNull: false
     }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = AvailableFor;

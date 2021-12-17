@@ -1,8 +1,9 @@
-const State = require('../models/State');
+const { State } = require('../models/models');
 
 class StatesController {
   get = async(req, res, next) => {
     try {
+      //State.sync();
       const states = await State.findAll();
       if (!states) throw new Error('States don\'t exist');
       res.end('Will send all the states to you! \n States: \n' + JSON.stringify(states));
@@ -47,7 +48,7 @@ class StateController {
     try {
       const state = await State.findByPk(req.params.id);
       if (!state) throw new Error('The state with id: ' + req.params.id + ' doesn\'t exist');
-      res.end('Will send details of the dish:' + req.params.id + ' to you! \n' + JSON.stringify(state));
+      res.end('Will send details of the state:' + req.params.id + ' to you! \n' + JSON.stringify(state));
     } catch(err) {
       res.statusCode = 404;
       res.end('ERROR:  \n ' + err.message);  
@@ -55,7 +56,7 @@ class StateController {
   }
   post = async(req, res, next) => {
     res.statusCode = 403;
-    res.end('POST operation not supported on /dishes/' + req.params.id);
+    res.end('POST operation not supported on /states/' + req.params.id);
   }
   put = async(req, res, next) => {
     try {
@@ -73,7 +74,7 @@ class StateController {
       const state = await State.findByPk(req.params.id);
       if (!state) throw new Error('The state with id: ' + req.params.id + ' doesn\'t exist');
       state.destroy();
-      res.end('Deleting the dish:' + req.params.id);
+      res.end('Deleting the state:' + req.params.id);
     } catch(err) {
       res.statusCode = 404;
       res.end('ERROR:  \n ' + err.message);  

@@ -20,7 +20,7 @@ const server = http.createServer(app);
 (async () => {
   try {
     associate();
-    await sequelize.sync({force: true});
+    await sequelize.sync({force: false});
   }
   catch(err) {
     console.log('Error', err);

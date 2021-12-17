@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const Grant = sequelize.define('grant', {
+const Grant = sequelize.define('Grant', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -22,6 +22,10 @@ const Grant = sequelize.define('grant', {
       type: Sequelize.INTEGER,
       allowNull: false
     }
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = Grant;

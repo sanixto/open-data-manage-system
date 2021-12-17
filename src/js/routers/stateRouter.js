@@ -1,8 +1,5 @@
 const stateRouter = require('express').Router();
-// const bodyParser = require('body-parser');
 const { statesController, stateController}  = require('../controllers/State');
-
-// stateRouter.use(bodyParser.json());
 
 stateRouter.route('/')
   .all((req, res, next) => {

@@ -1,7 +1,7 @@
 const sequelize = require('../DB/db');
 const Sequelize = require('sequelize');
 
-const Role = sequelize.define('role', {
+const Role = sequelize.define('Role', {
     id: {
       type: Sequelize.INTEGER,
       autoIncrement: true,
@@ -11,6 +11,13 @@ const Role = sequelize.define('role', {
     name: {
       type: Sequelize.STRING(255),
     }
+  }, {
+    sequelize,
+    timestamps: false
+  }, {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true
   });
 
   module.exports = Role;
