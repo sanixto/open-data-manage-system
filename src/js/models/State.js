@@ -11,6 +11,9 @@ const State = sequelize.define('state', {
     name: {
       type: Sequelize.STRING(255)
     }
+  }, {
+    sequelize,
+    timestamps: false
   });
 
   module.exports = State;
